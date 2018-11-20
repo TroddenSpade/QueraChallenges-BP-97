@@ -10,18 +10,17 @@ int main()
     double x1,x0,x2;
     double sqL0 , sqW0 ,sqL1 ,sqW1;
     double f0,f1;
-    double result;
 
     scanf("%lf%lf",&vL,&vW);
     scanf("%lf%lf",&r1,&s1);
     scanf("%lf%lf",&r2,&s2);
     scanf("%lf%lf",&a,&b);
 
-    x0 = r1;
-    x1 = r2;
+    x0 = (r1 + s1*a)/(a*a +1);
+    x1 = (r2 + s2*a)/(a*a +1);
     
     
-    for (int i=1; i <=40 ; i++)
+    for (int i=1; i <=50 ; i++)
     {
         sqL0 =sqrt( pow(x0-r1,2) + pow(a*x0 +b-s1 ,2) );
         sqW0 =sqrt( pow(x0-r2,2) + pow(a*x0 +b-s2 ,2) );
@@ -43,7 +42,7 @@ int main()
         
     }
 
-    printf("%f\n",sqL1/vL + sqW1/vW);
+    printf("%f\n",2 *(sqL1/vL + sqW1/vW));
 
 
 
