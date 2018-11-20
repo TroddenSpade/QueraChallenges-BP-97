@@ -18,9 +18,9 @@ int main()
 
     x0 = (r1 + s1*a)/(a*a +1);
     x1 = (r2 + s2*a)/(a*a +1);
+   
     
-    
-    for (int i=1; i <=50 ; i++)
+    for (int i=1; ; i++)
     {
         sqL0 =sqrt( pow(x0-r1,2) + pow(a*x0 +b-s1 ,2) );
         sqW0 =sqrt( pow(x0-r2,2) + pow(a*x0 +b-s2 ,2) );
