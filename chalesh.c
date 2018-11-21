@@ -10,17 +10,30 @@ int main()
     double x1,x0,x2;
     double sqL0 , sqW0 ,sqL1 ,sqW1;
     double f0,f1;
+    double tempR , tempS;
 
     scanf("%lf%lf",&vL,&vW);
-    scanf("%lf%lf",&r1,&s1);
-    scanf("%lf%lf",&r2,&s2);
+    scanf("%lf%lf",&r1,&s1);//bala khat
+    scanf("%lf%lf",&r2,&s2);// zir khat
     scanf("%lf%lf",&a,&b);
+
+    
+    if (s1 > a*r1+b){
+        tempS = s1;
+        s1 = s2;
+        s2 = tempS;
+
+        tempR = r1;
+        r1 = r2;
+        r2 = tempR;
+
+    }
 
     x0 = (r1 + s1*a)/(a*a +1);
     x1 = (r2 + s2*a)/(a*a +1);
    
     
-    for (int i=1; ; i++)
+    for (int i=1;i<100 ; i++)
     {
         sqL0 =sqrt( pow(x0-r1,2) + pow(a*x0 +b-s1 ,2) );
         sqW0 =sqrt( pow(x0-r2,2) + pow(a*x0 +b-s2 ,2) );
