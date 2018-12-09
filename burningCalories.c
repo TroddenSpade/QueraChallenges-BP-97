@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+//Time Limit Exceeded * 10
+
 int maxRout(int m,int n,int array[n][m],int x,int y,int direc);
 
 int main(){
