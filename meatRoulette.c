@@ -62,11 +62,7 @@ int main(){
     steps -= 2*extraCount;
     
     steps +=2*(count-antiCount);
-    
-    // for(int i=0;i<n;i++){
-        
-    //     printf("%d",arr[i]);
-    // }
+
     printf("%d",steps);
     return 0;
 
